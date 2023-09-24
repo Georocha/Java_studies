@@ -8,6 +8,10 @@ public class ArvoreBinaria {
 	public NodoArvoreBinaria getRaiz() {
 		return raiz;
 	}
+
+	public int getTamanho() {
+		return tamanho;
+	}
 	
 	public NodoArvoreBinaria criaRaiz(Object info) {
 		if (raiz != null) {
@@ -25,6 +29,7 @@ public class ArvoreBinaria {
 		NodoArvoreBinaria nodo = new NodoArvoreBinaria(info);
 		nodo.setPai(pai);
 		pai.setEsquerdo(nodo);
+		tamanho++;
 		return nodo;
 	}
 	
@@ -36,6 +41,7 @@ public class ArvoreBinaria {
 		NodoArvoreBinaria nodo = new NodoArvoreBinaria(info);
 		nodo.setPai(pai);
 		pai.setDireito(nodo);
+		tamanho++;
 		return nodo;
 	}
 	
