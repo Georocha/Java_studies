@@ -22,13 +22,13 @@ public class Programa {
 
 		System.out.println(arvore);
 
-		System.out.println("Travessia Pr� ordem:");
+		System.out.println("Travessia Pre ordem:");
 		VisitanteImpressao impressora = new VisitanteImpressao();
 		arvore.travessiaPreOrdem(impressora);
 
 		VisitanteExpressao avaliador = new VisitanteExpressao();
 		arvore.travessiaPosOrdem(avaliador);
-		System.out.println("Resultado da avalia��o: " + avaliador.getResultado());
+		System.out.println("Resultado da avaliacao: " + avaliador.getResultado());
 	}
 
 }
