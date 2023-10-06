@@ -7,7 +7,7 @@ public class ArvoreBinaria {
 
 	public NodoAB criaRaiz(Object info) {
 		if (raiz != null) {
-			throw new RuntimeException("Raiz j� existe!");
+			throw new RuntimeException("Raiz ja existe!");
 		}
 		raiz = new NodoAB(info);
 		tamanho++;
@@ -24,7 +24,7 @@ public class ArvoreBinaria {
 
 	public NodoAB insereEsquerda(NodoAB pai, Object info) {
 		if (pai.getEsquerdo() != null) {
-			throw new RuntimeException("Filho esquerdo j� existe!");
+			throw new RuntimeException("Filho esquerdo ja existe!");
 		}
 		NodoAB nodo = new NodoAB(info);
 		nodo.setPai(pai);
@@ -35,7 +35,7 @@ public class ArvoreBinaria {
 
 	public NodoAB insereDireita(NodoAB pai, Object info) {
 		if (pai.getDireito() != null) {
-			throw new RuntimeException("Filho direito j� existe!");
+			throw new RuntimeException("Filho direito ja existe!");
 		}
 		NodoAB nodo = new NodoAB(info);
 		nodo.setPai(pai);
