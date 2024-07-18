@@ -36,5 +36,18 @@ public class Administrador extends Usuario {
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
-	
+
+	public String exportarRelatorio() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Relatório:\n");
+		for (Produto produto : produtos) {
+            	sb.append("Nome: ").append(produto.getNome()).append("\n");
+            	sb.append("Descrição: ").append(produto.getDescricao()).append("\n");
+            	sb.append("Quantidade: ").append(produto.getQuantidade()).append("\n");
+            	sb.append("Preço: ").append(produto.getPreco()).append("\n");
+            	sb.append("Validade: ").append(produto.getValidade()).append("\n");
+            	sb.append("-----------------------\n");
+        	}
+        return sb.toString();
+	}
 }
