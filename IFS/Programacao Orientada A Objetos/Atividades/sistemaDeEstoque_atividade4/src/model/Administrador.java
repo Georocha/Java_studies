@@ -34,7 +34,7 @@ public class Administrador extends Usuario {
 	}
 
 	public List<Produto> getProdutos() {
-		return produtos;
+		return new ArrayList<>(Produto) (this.produtos);
 	}
 
 	public String exportarRelatorio() {
