@@ -48,5 +48,23 @@ class UsuarioTeste {
 
         assertTrue(actualMessage.contains(expectedMessage));
 	}
-	
+	@Test
+    	public void testExportarRelatorioTexto() {
+        	String relatorioEsperado = "Relatório de Estoque:\n" +
+                	"Nome: Produto1\n" +
+                	"Descrição: Descricao1\n" +
+                	"Quantidade: 10\n" +
+                	"Preço: 50.0\n" +
+                	"Validade: 2024-12-31\n" +
+                	"-----------------------\n" +
+                	"Nome: Produto2\n" +
+                	"Descrição: Descricao2\n" +
+                	"Quantidade: 20\n" +
+                	"Preço: 30.0\n" +
+                	"Validade: 2025-01-15\n" +
+                	"-----------------------\n";
+
+        	String relatorioGerado = admin.exportarRelatorio();
+        	assertEquals(relatorioEsperado, relatorioGerado);
+    	}
 }
